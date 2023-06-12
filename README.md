@@ -1,4 +1,3 @@
-
 # Lucky 7 Slot Machine
 
 This responsive browser-based 3-reel slot machine game was built using the jQuery library, JavaScript, HTML and CSS.
@@ -7,7 +6,7 @@ Try not to spend all your money at once, because, as you already know, the house
 
 ## Demo
 
-Here you can find the [LIVE DEMO PREVIEW](http://drafter.atwebpages.com/lucky-7-slot-machine/).
+Here you can find the [LIVE DEMO PREVIEW](https://it-drafter.github.io/lucky-7-slot-machine/).
 
 ## Run Locally
 
