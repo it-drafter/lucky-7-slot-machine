@@ -1,326 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucky 7 Slot Machine</title>
-    <link rel="shortcut icon" href="./gfx/seven.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./gfx/seven.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/jquery-3.6.3.min.js" defer></script>
     <script src="./js/script.js" defer></script>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div>
+      <div>
+        <header>
+          <h1>Lucky <img src="./gfx/sevenhead.svg" alt="" /></h1>
+          <p>Slot Machine</p>
+        </header>
+      </div>
 
-        <div>
-            <header>
-                <h1>Lucky <img src="./gfx/sevenhead.svg" alt=""></h1>
-                <p>Slot Machine</p>
-            </header>
+      <main>
+        <div class="above flex-container">
+          <div class="paytable flex-container">
+            <div class="paytable-button-container">
+              <span id="paytable">$ PAYTABLE $</span>
+            </div>
+            <div class="audio-button">
+              <img id="audiobutton" src="./gfx/audiooff.svg" alt="Audio" />
+            </div>
+          </div>
+          <div class="main-display flex-container">
+            <span class="good-luck invisible" id="maindisplay">
+              <img src="./gfx/4-Leaf-Clover.svg" alt="Four Leaf Clover" />
+              GOOD LUCK!
+              <img src="./gfx/4-Leaf-Clover.svg" alt="Four Leaf Clover" />
+            </span>
+          </div>
+          <div class="flex-container above-thirdrow">
+            <div class="total-money" id="totalmoney">
+              <span>TOTAL: $0</span>
+            </div>
+            <div class="bet" id="bet"><span>BET: $0</span></div>
+            <div class="win" id="win"><span>WIN: $0</span></div>
+          </div>
         </div>
-
-        <main>
-            <div class="above flex-container">
-                <div class="paytable flex-container">
-                    <div class="paytable-button-container"><span id="paytable">$ PAYTABLE $</span></div>
-                    <div class="audio-button"><img id="audiobutton" src="./gfx/audiooff.svg" alt="Audio"></div>
-                </div>
-                <div class="main-display flex-container">
-                    <span class="good-luck invisible" id="maindisplay">
-                        <img src="./gfx/4-Leaf-Clover.svg" alt="Four Leaf Clover">
-                         GOOD LUCK! 
-                         <img src="./gfx/4-Leaf-Clover.svg" alt="Four Leaf Clover">
-                    </span>
-                </div>
-                <div class="flex-container above-thirdrow">
-                    <div class="total-money" id="totalmoney"><span>TOTAL: $0</span></div>
-                    <div class="bet" id="bet"><span>BET: $0</span></div>
-                    <div class="win" id="win"><span>WIN: $0</span></div>
-                </div>
+        <div class="flex-container">
+          <div class="reels flex-container">
+            <div class="line-marker flex-container"><span>1</span></div>
+            <div class="reel-container">
+              <div id="reel1">
+                <img src="./gfx/seven.svg" alt="seven" />
+                <img src="./gfx/2X.png" alt="2X" />
+                <img src="./gfx/5X.png" alt="5X" />
+                <img src="./gfx/10X.png" alt="10X" />
+                <img src="./gfx/bar.jpg" alt="bar" />
+                <img src="./gfx/barBar.jpg" alt="barBar" />
+                <img src="./gfx/barBarBar.jpg" alt="barBarBar" />
+                <img src="./gfx/cherries.svg" alt="cherries" />
+                <img src="./gfx/nothing.png" alt="nothing" />
+                <img src="./gfx/loser.png" alt="loser" />
+              </div>
             </div>
-            <div class="flex-container">
-                
-                <div class="reels flex-container">
-                    <div class="line-marker flex-container"><span>1</span></div>
-                    <div class="reel-container">
-                        <div id="reel1">
-                            <img src="./gfx/seven.svg" alt="seven">
-                            <img src="./gfx/2X.png" alt="2X">
-                            <img src="./gfx/5X.png" alt="5X">
-                            <img src="./gfx/10X.png" alt="10X">
-                            <img src="./gfx/bar.jpg" alt="bar">
-                            <img src="./gfx/barBar.jpg" alt="barBar">
-                            <img src="./gfx/barBarBar.jpg" alt="barBarBar">
-                            <img src="./gfx/cherries.svg" alt="cherries">
-                            <img src="./gfx/nothing.png" alt="nothing">
-                            <img src="./gfx/loser.png" alt="loser">
-                        </div>
-                    </div>
-                    <div class="line-marker flex-container"><hr></div>
-                    <div class="reel-container">
-                        <div id="reel2">
-                            <img src="./gfx/seven.svg" alt="seven">
-                            <img src="./gfx/2X.png" alt="2X">
-                            <img src="./gfx/5X.png" alt="5X">
-                            <img src="./gfx/10X.png" alt="10X">
-                            <img src="./gfx/bar.jpg" alt="bar">
-                            <img src="./gfx/barBar.jpg" alt="barBar">
-                            <img src="./gfx/barBarBar.jpg" alt="barBarBar">
-                            <img src="./gfx/cherries.svg" alt="cherries">
-                            <img src="./gfx/nothing.png" alt="nothing">
-                            <img src="./gfx/loser.png" alt="loser">
-                        </div>
-                    </div>
-                    <div class="line-marker flex-container"><hr></div>
-                    <div class="reel-container">
-                        <div id="reel3">
-                            <img src="./gfx/seven.svg" alt="seven">
-                            <img src="./gfx/2X.png" alt="2X">
-                            <img src="./gfx/5X.png" alt="5X">
-                            <img src="./gfx/10X.png" alt="10X">
-                            <img src="./gfx/bar.jpg" alt="bar">
-                            <img src="./gfx/barBar.jpg" alt="barBar">
-                            <img src="./gfx/barBarBar.jpg" alt="barBarBar">
-                            <img src="./gfx/cherries.svg" alt="cherries">
-                            <img src="./gfx/nothing.png" alt="nothing">
-                            <img src="./gfx/loser.png" alt="loser">
-                        </div>
-                    </div>
-                    <div class="line-marker flex-container"><span>1</span></div>
-                </div><div class="handle-container flex-container">
-                    <div class="handle-base"></div>
-                    <div class="handle-bottom" id="handlebottom"></div>
-                    <div class="handle-middle" id="handlemiddle"></div>
-                    <div class="handle-top" id="handletop"></div>
-                </div>
-                
-                <div class="spin-container flex-container">
-                    <span class="btn-spin" id="btnspin" >3</span>
-                </div>
-
+            <div class="line-marker flex-container"><hr /></div>
+            <div class="reel-container">
+              <div id="reel2">
+                <img src="./gfx/seven.svg" alt="seven" />
+                <img src="./gfx/2X.png" alt="2X" />
+                <img src="./gfx/5X.png" alt="5X" />
+                <img src="./gfx/10X.png" alt="10X" />
+                <img src="./gfx/bar.jpg" alt="bar" />
+                <img src="./gfx/barBar.jpg" alt="barBar" />
+                <img src="./gfx/barBarBar.jpg" alt="barBarBar" />
+                <img src="./gfx/cherries.svg" alt="cherries" />
+                <img src="./gfx/nothing.png" alt="nothing" />
+                <img src="./gfx/loser.png" alt="loser" />
+              </div>
             </div>
-            <div class="under flex-container">
-
-                <div class="flex-container under-firstrow">
-                    <div class="one-bet" id="onebet"><span>$1 BET</span></div>
-                    <div class="two-bet" id="twobet"><span>$2 BET</span></div>
-                    <div class="max-bet" id="maxbet"><span>MAX BET</span></div>
-                </div>
-                <div class="flex-container under-secondrow">
-                    <div class="collect-money" id="collectmoney"><span>COLLECT MONEY</span></div>
-                    <div class="insert-money" id="insertmoney"><span>INSERT MONEY</span></div>
-                </div>
-
+            <div class="line-marker flex-container"><hr /></div>
+            <div class="reel-container">
+              <div id="reel3">
+                <img src="./gfx/seven.svg" alt="seven" />
+                <img src="./gfx/2X.png" alt="2X" />
+                <img src="./gfx/5X.png" alt="5X" />
+                <img src="./gfx/10X.png" alt="10X" />
+                <img src="./gfx/bar.jpg" alt="bar" />
+                <img src="./gfx/barBar.jpg" alt="barBar" />
+                <img src="./gfx/barBarBar.jpg" alt="barBarBar" />
+                <img src="./gfx/cherries.svg" alt="cherries" />
+                <img src="./gfx/nothing.png" alt="nothing" />
+                <img src="./gfx/loser.png" alt="loser" />
+              </div>
             </div>
+            <div class="line-marker flex-container"><span>1</span></div>
+          </div>
+          <div class="handle-container flex-container">
+            <div class="handle-base"></div>
+            <div class="handle-bottom" id="handlebottom"></div>
+            <div class="handle-middle" id="handlemiddle"></div>
+            <div class="handle-top" id="handletop"></div>
+          </div>
 
-        </main>
+          <div class="spin-container flex-container">
+            <span class="btn-spin" id="btnspin">3</span>
+          </div>
+        </div>
+        <div class="under flex-container">
+          <div class="flex-container under-firstrow">
+            <div class="one-bet" id="onebet"><span>$1 BET</span></div>
+            <div class="two-bet" id="twobet"><span>$2 BET</span></div>
+            <div class="max-bet" id="maxbet"><span>MAX BET</span></div>
+          </div>
+          <div class="flex-container under-secondrow">
+            <div class="collect-money" id="collectmoney">
+              <span>COLLECT MONEY</span>
+            </div>
+            <div class="insert-money" id="insertmoney">
+              <span>INSERT MONEY</span>
+            </div>
+          </div>
+        </div>
+      </main>
 
-        <footer>
-            <p>Design and code: drafter</p>
-            <p>February 2023</p>
-        </footer>
-
+      <footer>
+        <p>Design and code: it-drafter</p>
+        <p>February 2023</p>
+      </footer>
     </div>
 
     <div class="popup-insert-money" id="popupinsertmoney">
-        <div class="insert-money-content">
-            <div class="popup-x flex-container">
-                <span id="popupinsertmoneyx">&times;</span>
-            </div>
-            <div class="grid-container">
-                    <div class="grid-item"><img id="onedollar" src="./gfx/onedollar.png" alt="One Dollar"></div>
-                    <div class="grid-item"><img id="twodollars" src="./gfx/twodollars.png" alt="Two Dollars"></div>
-                    <div class="grid-item"><img id="fivedollars" src="./gfx/fivedollars.png" alt="Five Dollars"></div>
-                    <div class="grid-item"><img id="tendollars" src="./gfx/tendollars.png" alt="Ten Dollars"></div>
-                    <div class="grid-item"><img id="twentydollars" src="./gfx/twentydollars.png" alt="Twenty Dollars"></div>
-                    <div class="grid-item"><img id="fiftydollars" src="./gfx/fiftydollars.png" alt="Fifty Dollars"></div>
-                    <div class="grid-item"><img id="hundreddollars" src="./gfx/hundreddollars.png" alt="Hundred Dollars"></div>
-            </div>
+      <div class="insert-money-content">
+        <div class="popup-x flex-container">
+          <span id="popupinsertmoneyx">&times;</span>
         </div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img id="onedollar" src="./gfx/onedollar.png" alt="One Dollar" />
+          </div>
+          <div class="grid-item">
+            <img id="twodollars" src="./gfx/twodollars.png" alt="Two Dollars" />
+          </div>
+          <div class="grid-item">
+            <img
+              id="fivedollars"
+              src="./gfx/fivedollars.png"
+              alt="Five Dollars"
+            />
+          </div>
+          <div class="grid-item">
+            <img id="tendollars" src="./gfx/tendollars.png" alt="Ten Dollars" />
+          </div>
+          <div class="grid-item">
+            <img
+              id="twentydollars"
+              src="./gfx/twentydollars.png"
+              alt="Twenty Dollars"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              id="fiftydollars"
+              src="./gfx/fiftydollars.png"
+              alt="Fifty Dollars"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              id="hundreddollars"
+              src="./gfx/hundreddollars.png"
+              alt="Hundred Dollars"
+            />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="popup-paytable" id="popuppaytable">
-        <div class="paytable-content">
-            <div class="popup-x flex-container">
-                <span id="popuppaytablex">&times;</span>
-            </div>
-            <div class="flex-container paytable-too-big">
-
-                <div class="one-dollar-bet">
-                    <table>
-                        <tr>
-                            <td colspan="5">$1 BET</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="description">buys the 2X symbol</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="td-with-image"><img src="./gfx/2X.png" alt="2X"></td>
-                            <th colspan="3">symbol doubles<br>winning combination</th>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="td-with-image"><img src="./gfx/2X.png" alt="2X"></td>
-                            <th colspan="3">symbols pays 4x<br>winning combination</th>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="description">except for pays containing "2X<br>wild" symbol already shown</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/2X.png" alt="2X"></td>
-                            <td class="td-with-image"><img src="./gfx/2X.png" alt="2X"></td>
-                            <td class="td-with-image"><img src="./gfx/2X.png" alt="2X"></td>
-                            <td colspan="2">$1600</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/seven.svg" alt="seven"></td>
-                            <td class="td-with-image"><img src="./gfx/seven.svg" alt="seven"></td>
-                            <td class="td-with-image"><img src="./gfx/seven.svg" alt="seven"></td>
-                            <td colspan="2">$100</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/barBarBar.jpg" alt="barBarBar"></td>
-                            <td class="td-with-image"><img src="./gfx/barBarBar.jpg" alt="barBarBar"></td>
-                            <td class="td-with-image"><img src="./gfx/barBarBar.jpg" alt="barBarBar"></td>
-                            <td colspan="2">$30</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/barBar.jpg" alt="barBar"></td>
-                            <td class="td-with-image"><img src="./gfx/barBar.jpg" alt="barBar"></td>
-                            <td class="td-with-image"><img src="./gfx/barBar.jpg" alt="barBar"></td>
-                            <td colspan="2">$20</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/bar.jpg" alt="bar"></td>
-                            <td class="td-with-image"><img src="./gfx/bar.jpg" alt="bar"></td>
-                            <td class="td-with-image"><img src="./gfx/bar.jpg" alt="bar"></td>
-                            <td colspan="2">$10</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/cherries.svg" alt="cherries"></td>
-                            <td class="td-with-image"><img src="./gfx/cherries.svg" alt="cherries"></td>
-                            <td class="td-with-image"><img src="./gfx/cherries.svg" alt="cherries"></td>
-                            <td colspan="2">$10</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/bar.jpg" alt="bar"></td>
-                            <td class="td-with-image"><img src="./gfx/barBar.jpg" alt="barBar"></td>
-                            <td class="td-with-image"><img src="./gfx/barBarBar.jpg" alt="barBarBar"></td>
-                            <td class="small-font">any 3 mixed</td>
-                            <td>$5</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="small-font">any two</td>
-                            <td class="td-with-image"><img src="./gfx/cherries.svg" alt="cherries"></td>
-                            <td colspan="3">$5</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="small-font">any one</td>
-                            <td class="td-with-image"><img src="./gfx/cherries.svg" alt="cherries"></td>
-                            <td colspan="3">$2</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="small-font">any one</td>
-                            <td class="td-with-image"><img src="./gfx/loser.png" alt="loser"></td>
-                            <td colspan="3">lose $5</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="small-font">any two</td>
-                            <td class="td-with-image"><img src="./gfx/loser.png" alt="loser"></td>
-                            <td colspan="3">lose $20</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/loser.png" alt="loser"></td>
-                            <td class="td-with-image"><img src="./gfx/loser.png" alt="loser"></td>
-                            <td class="td-with-image"><img src="./gfx/loser.png" alt="loser"></td>
-                            <td colspan="2">lose $100</td>
-                        </tr>
-                    </table>
-
-                </div>
-                <div class="two-dollars-bet">
-                    <table>
-                        <tr>
-                            <td colspan="5">$2 BET</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="description">buys the 5X symbol</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="td-with-image"><img src="./gfx/5X.png" alt="5X"></td>
-                            <th colspan="3">symbol pays 5x<br>winning combination</th>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="td-with-image"><img src="./gfx/5X.png" alt="5X"></td>
-                            <th colspan="3">symbols pays 25x<br>winning combination</th>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="description">except for pays containing "5X<br>wild" symbol already shown</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/5X.png" alt="5X"></td>
-                            <td class="td-with-image"><img src="./gfx/5X.png" alt="5X"></td>
-                            <td class="td-with-image"><img src="./gfx/5X.png" alt="5X"></td>
-                            <td colspan="2">$2500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/2X.png" alt="2X"></td>
-                            <td class="td-with-image"><img src="./gfx/5X.png" alt="5X"></td>
-                            <td colspan="2" class="small-font">any 3 mixed</td>
-                            <td>$1000</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="three-dollars-bet">
-
-                    <table>
-                        <tr>
-                            <td colspan="5">$3 BET</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="description">buys the 10X symbol</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="td-with-image"><img src="./gfx/10X.png" alt="10X"></td>
-                            <th colspan="3">symbol pays 10X<br>winning combination</th>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="td-with-image"><img src="./gfx/10X.png" alt="10X"></td>
-                            <th colspan="3">symbols pays 100x<br>winning combination</th>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="description">except for pays containing "10X<br>wild" symbol already shown</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/10X.png" alt="10X"></td>
-                            <td class="td-with-image"><img src="./gfx/10X.png" alt="10X"></td>
-                            <td class="td-with-image"><img src="./gfx/10X.png" alt="10X"></td>
-                            <td colspan="2">$10000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-with-image"><img src="./gfx/2X.png" alt="2X"></td>
-                            <td class="td-with-image"><img src="./gfx/5X.png" alt="5X"></td>
-                            <td class="td-with-image"><img src="./gfx/10X.png" alt="10X"></td>
-                            <td class="small-font">any 3 mixed</td>
-                            <td>$1000</td>
-                        </tr>
-                    </table>
-                    
-                </div>
-
-            </div>
-
+      <div class="paytable-content">
+        <div class="popup-x flex-container">
+          <span id="popuppaytablex">&times;</span>
         </div>
-    </div>
+        <div class="flex-container paytable-too-big">
+          <div class="one-dollar-bet">
+            <table>
+              <tr>
+                <td colspan="5">$1 BET</td>
+              </tr>
+              <tr>
+                <td colspan="5" class="description">buys the 2X symbol</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="td-with-image">
+                  <img src="./gfx/2X.png" alt="2X" />
+                </td>
+                <th colspan="3">symbol doubles<br />winning combination</th>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="td-with-image">
+                  <img src="./gfx/2X.png" alt="2X" />
+                </td>
+                <th colspan="3">symbols pays 4x<br />winning combination</th>
+              </tr>
+              <tr>
+                <td colspan="5" class="description">
+                  except for pays containing "2X<br />wild" symbol already shown
+                </td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/2X.png" alt="2X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/2X.png" alt="2X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/2X.png" alt="2X" />
+                </td>
+                <td colspan="2">$1600</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/seven.svg" alt="seven" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/seven.svg" alt="seven" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/seven.svg" alt="seven" />
+                </td>
+                <td colspan="2">$100</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/barBarBar.jpg" alt="barBarBar" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/barBarBar.jpg" alt="barBarBar" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/barBarBar.jpg" alt="barBarBar" />
+                </td>
+                <td colspan="2">$30</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/barBar.jpg" alt="barBar" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/barBar.jpg" alt="barBar" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/barBar.jpg" alt="barBar" />
+                </td>
+                <td colspan="2">$20</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/bar.jpg" alt="bar" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/bar.jpg" alt="bar" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/bar.jpg" alt="bar" />
+                </td>
+                <td colspan="2">$10</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/cherries.svg" alt="cherries" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/cherries.svg" alt="cherries" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/cherries.svg" alt="cherries" />
+                </td>
+                <td colspan="2">$10</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/bar.jpg" alt="bar" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/barBar.jpg" alt="barBar" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/barBarBar.jpg" alt="barBarBar" />
+                </td>
+                <td class="small-font">any 3 mixed</td>
+                <td>$5</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="small-font">any two</td>
+                <td class="td-with-image">
+                  <img src="./gfx/cherries.svg" alt="cherries" />
+                </td>
+                <td colspan="3">$5</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="small-font">any one</td>
+                <td class="td-with-image">
+                  <img src="./gfx/cherries.svg" alt="cherries" />
+                </td>
+                <td colspan="3">$2</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="small-font">any one</td>
+                <td class="td-with-image">
+                  <img src="./gfx/loser.png" alt="loser" />
+                </td>
+                <td colspan="3">lose $5</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="small-font">any two</td>
+                <td class="td-with-image">
+                  <img src="./gfx/loser.png" alt="loser" />
+                </td>
+                <td colspan="3">lose $20</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/loser.png" alt="loser" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/loser.png" alt="loser" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/loser.png" alt="loser" />
+                </td>
+                <td colspan="2">lose $100</td>
+              </tr>
+            </table>
+          </div>
+          <div class="two-dollars-bet">
+            <table>
+              <tr>
+                <td colspan="5">$2 BET</td>
+              </tr>
+              <tr>
+                <td colspan="5" class="description">buys the 5X symbol</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="td-with-image">
+                  <img src="./gfx/5X.png" alt="5X" />
+                </td>
+                <th colspan="3">symbol pays 5x<br />winning combination</th>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="td-with-image">
+                  <img src="./gfx/5X.png" alt="5X" />
+                </td>
+                <th colspan="3">symbols pays 25x<br />winning combination</th>
+              </tr>
+              <tr>
+                <td colspan="5" class="description">
+                  except for pays containing "5X<br />wild" symbol already shown
+                </td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/5X.png" alt="5X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/5X.png" alt="5X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/5X.png" alt="5X" />
+                </td>
+                <td colspan="2">$2500</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/2X.png" alt="2X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/5X.png" alt="5X" />
+                </td>
+                <td colspan="2" class="small-font">any 3 mixed</td>
+                <td>$1000</td>
+              </tr>
+            </table>
+          </div>
 
-</body>
+          <div class="three-dollars-bet">
+            <table>
+              <tr>
+                <td colspan="5">$3 BET</td>
+              </tr>
+              <tr>
+                <td colspan="5" class="description">buys the 10X symbol</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="td-with-image">
+                  <img src="./gfx/10X.png" alt="10X" />
+                </td>
+                <th colspan="3">symbol pays 10X<br />winning combination</th>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="td-with-image">
+                  <img src="./gfx/10X.png" alt="10X" />
+                </td>
+                <th colspan="3">symbols pays 100x<br />winning combination</th>
+              </tr>
+              <tr>
+                <td colspan="5" class="description">
+                  except for pays containing "10X<br />wild" symbol already
+                  shown
+                </td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/10X.png" alt="10X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/10X.png" alt="10X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/10X.png" alt="10X" />
+                </td>
+                <td colspan="2">$10000</td>
+              </tr>
+              <tr>
+                <td class="td-with-image">
+                  <img src="./gfx/2X.png" alt="2X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/5X.png" alt="5X" />
+                </td>
+                <td class="td-with-image">
+                  <img src="./gfx/10X.png" alt="10X" />
+                </td>
+                <td class="small-font">any 3 mixed</td>
+                <td>$1000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
